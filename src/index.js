@@ -6,7 +6,11 @@ import * as serviceWorker from './serviceWorker';
 import ApolloClient from 'apollo-boost';
 
 const client = new ApolloClient({
-  uri: 'https://pokestop-api-staging.herokuapp.com/graphql',
+  // uri: 'https://pokestop-api-staging.herokuapp.com/graphql',
+  uri: 'http://localhost:3000/graphql',
+  headers: {
+    "LOCALE": 'en'
+  },
 });
 
 render(<App client={client} />, document.getElementById('root'));
