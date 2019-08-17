@@ -13,7 +13,7 @@ const Image = styled.img`
   margin-top: -50px;
 `
 
-function PokemonImage({ skin }) {
+function PokemonImage({ skin, color }) {
   return (
     <Wrapper>
       <Image src={skin} alt='' />

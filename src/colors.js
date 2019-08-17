@@ -1,6 +1,6 @@
 export const pokemonTypesColors = {
   bug: '#acc44e',
-  darkness: '#595465',
+  dark: '#595465',
   dragon: '#2b6cba',
   electric: '#efd35c',
   fighting: '#c14c68',
@@ -17,4 +17,8 @@ export const pokemonTypesColors = {
   rock: '#c5b890',
   steel: '#69a4a8',
   water: '#79b6dd',
+}
+
+export function typeColor(key) {
+  return pokemonTypesColors[key.toLowerCase()]
 }
