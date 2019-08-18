@@ -24,16 +24,18 @@ const OrnamentSVG = styled.svg`
   margin-top: -60px;
 `
 
-export const Ornament = ({ color }) => (
-  <OrnamentSVG width="177" height="177" viewBox="0 0 177 177" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g opacity="0.3">
-      <rect x="139.02" width="143.924" height="143.924" rx="24" transform="rotate(75 139.02 0)" fill="url(#paint0_linear)"/>
-    </g>
-    <defs>
-      <linearGradient id="paint0_linear" x1="187.394" y1="51.2874" x2="360.852" y2="35.6488" gradientUnits="userSpaceOnUse">
-        <stop stopColor={lighten(0.2, color)} />
-        <stop offset="0.796391" stopColor={lighten(0.2, color)}  stopOpacity="0"/>
-      </linearGradient>
-    </defs>
-  </OrnamentSVG>
-)
+export function Ornament({ color }) {
+  return (
+    <OrnamentSVG width="177" height="177" viewBox="0 0 177 177" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g opacity="0.3">
+        <rect x="139.02" width="143.924" height="143.924" rx="24" transform="rotate(75 139.02 0)" fill="url(#paint0_linear)"/>
+      </g>
+      <defs>
+        <linearGradient id="paint0_linear" x1="187.394" y1="51.2874" x2="360.852" y2="35.6488" gradientUnits="userSpaceOnUse">
+          <stop stopColor={lighten(0.2, '#FFFF')} />
+          <stop offset="0.796391" stopColor={lighten(0.2, '#FFF')}  stopOpacity="0"/>
+        </linearGradient>
+      </defs>
+    </OrnamentSVG>
+  )
+}

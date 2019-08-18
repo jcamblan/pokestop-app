@@ -14,7 +14,7 @@ class App extends React.Component {
       <ApolloProvider client={this.props.client}>
         <Wrapper>
           <Router>
-            <Route path="/pokemon/:pokemonId" component={PokemonCard} />
+            <Route path="/pokemon/:pokemonNid" component={PokemonCard} />
           </Router>
         </Wrapper>
       </ApolloProvider>

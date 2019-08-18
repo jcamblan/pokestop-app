@@ -1,31 +1,20 @@
 import React from 'react';
 import styled from 'styled-components'
-import { Link } from "react-router-dom";
-import { getNextPokemonId, getPrevPokemonId } from '../utils'
+import back from '../img/arrow-left.svg'
+import heart from '../img/heart.svg'
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 3rem 1rem 1.5rem 1rem;
+  padding: 3rem 1rem 3rem 1rem;
+  z-index: 4;
 `
 
-const StyledLink = styled(Link)`
-  color: white;
-  text-decoration: none;
-  &:active {
-    color: white;
-  }
-`
-
-function PokemonNavigation({ match }) {
+function PokemonNavigation({ prev, next }) {
   return (
     <Wrapper>
-        <StyledLink to={`/pokemon/${getPrevPokemonId(match.params.pokemonId)}`}>
-          {'<='}
-        </StyledLink>
-        <StyledLink to={`/pokemon/${getNextPokemonId(match.params.pokemonId)}`}>
-          {'=>'}
-        </StyledLink>
+      <img src={back} alt='' />
+      <img src={heart} alt='' />
     </Wrapper>
   )
 }
